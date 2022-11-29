@@ -20,9 +20,12 @@ void main(void)
 		while (!feof(fp))
 		{
 			fscanf_s(fp, "%s", cadenas, 300);
+			caracter = 0;
+			caracter3 = 0;
+			caracter2 = 0;
 			while (cadenas[caracter])
 			{
-				if (cadenas[caracter] == ')'||cadenas[caracter]=='('||cadenas[caracter]=='.')
+				if (cadenas[caracter] == ')'||cadenas[caracter]=='('||cadenas[caracter]=='.'||cadenas[caracter]==',')
 				{
 					buffer[conta][caracter3++] = cadenas[caracter++];
 					buffer[conta++][caracter3] = '\0';
@@ -30,11 +33,15 @@ void main(void)
 				}
 				else
 				{
-					if (cadenas[caracter] != '('||cadenas[caracter]!=')'||cadenas[caracter]!='.')
+					if (cadenas[caracter] != '('||cadenas[caracter]!=')'||cadenas[caracter]!='.'||cadenas[caracter]!=',')
 					{
-						caracter3 = 0;
-						buffer[conta][caracter2++] = cadenas[caracter++];
-						buffer[conta][caracter2] = '\0';
+						while (cadenas[caracter] != '(' && cadenas[caracter] != ')' && cadenas[caracter] != '.'&&cadenas[caracter]!='\0'&&cadenas[caracter]!=',')
+						{
+							caracter3 = 0;
+							buffer[conta][caracter2++] = cadenas[caracter++];
+							buffer[conta][caracter2] = '\0';
+						}
+						conta++;
 					}
 				}
 			}
