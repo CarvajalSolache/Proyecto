@@ -9,7 +9,6 @@ void main(void)
 	char cadenas[200];
 	char buffer[200][20];
 	int caracter = 0, conta = 0, caracter2 = 0, caracter3 = 0;
-	int conta9 = 0;
 
 	FILE* fp;
 	scanf_s("%s", nombre, 256);
@@ -58,7 +57,7 @@ void main(void)
 			conta++;
 		else
 		{ 
-			while ((strcmp(buffer[conta2], buffer[conta2+1]) == 0))
+			while ((strcmp(buffer[conta2], buffer[conta2+3]) == 0))
 			{
 				estadistica++;
 			}
