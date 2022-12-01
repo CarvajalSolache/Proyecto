@@ -6,8 +6,8 @@
 void main(void)
 {
 	char nombre[500];
-	char cadenas[3300];
-	char buffer[3500][20];
+	char cadenas[200];
+	char buffer[200][20];
 	int caracter = 0, conta = 0, caracter2 = 0, caracter3 = 0;
 
 	FILE* fp;
@@ -48,7 +48,7 @@ void main(void)
 	}
 	caracter = 0;
 	buffer[conta][caracter] = '\0';
-	estadistica comienza en 1
+	//estadistica comienza en 1
 	int estadistica =0;
 	conta = 1; int conta2 = 0;
 	while (buffer[conta2][caracter])
