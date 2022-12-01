@@ -50,16 +50,16 @@ void main(void)
 	buffer[conta][caracter] = '\0';
 	//estadistica comienza en 1
 	int estadistica =0;
-	conta = 1; int conta2 = 0;
+	conta = 0; int conta2 = 0;
 	while (buffer[conta2][caracter])
 	{
 		if (conta2 == conta)
 			conta++;
 		else
 		{ 
-			while ((strcmp(buffer[conta2], buffer[conta]) == 0))
+			while ((strcmp(buffer[conta2], buffer[conta2+1]) == 0))
 			{
-				estadistica++, conta++;
+				estadistica++;
 			}
 			printf("%i\n", estadistica);
 			conta2++, conta = 0;
