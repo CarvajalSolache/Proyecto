@@ -9,6 +9,7 @@ void main(void)
 	char cadenas[200];
 	char buffer[200][20];
 	int caracter = 0, conta = 0, caracter2 = 0, caracter3 = 0;
+	int conta10 = 0;
 
 	FILE* fp;
 	scanf_s("%s", nombre, 256);
